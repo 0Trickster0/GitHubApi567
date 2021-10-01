@@ -3,7 +3,7 @@ import requests
 
 
 def parse_github_info(user_name: str):
-    name_url: str = f'https://api.github.com/users/{user_name}/repos'
+    name_url = f'https://api.github.com/users/{user_name}/repos'
     response = requests.get(name_url)
     json_info = json.loads(response.text)
     for repo in json_info:
@@ -11,7 +11,7 @@ def parse_github_info(user_name: str):
             print('The API rate limit is exceeded. Please try it later.')
             return
         repo_name = repo['name']
-        commits_url: str = f'https://api.github.com/repos/{user_name}/{repo_name}/commits'
+        commits_url = f'https://api.github.com/repos/{user_name}/{repo_name}/commits'
         res = requests.get(commits_url)
         j_info = json.loads(res.text)
         if type(j_info) == list:
