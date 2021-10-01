@@ -1,1 +1,1 @@
-[![build status of master](https://travis-ci.com/0Trickster0/GitHubApi567.svg?branch=master)](https://travis-ci.com/0Trickster0/GitHubApi567)
+[![build status of master](https://app.travis-ci.com/github/0Trickster0/GitHubApi567.svg?branch=master)](https://app.travis-ci.com/github/0Trickster0/GitHubApi567)

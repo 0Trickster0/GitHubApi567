@@ -8,7 +8,8 @@ def parse_github_info(user_name: str):
     json_info = json.loads(response.text)
     for repo in json_info:
         if type(repo) == str:
-            yield 'The API rate limit is exceeded. Please try it later.'
+            print('The API rate limit is exceeded. Please try it later.')
+            return
         repo_name = repo['name']
         commits_url: str = f'https://api.github.com/repos/{user_name}/{repo_name}/commits'
         res = requests.get(commits_url)
